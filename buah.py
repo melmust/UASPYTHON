@@ -23,3 +23,18 @@ lebar = st.number_input("Masukkan lebar (cm):")
 luas = panjang * lebar
 st.write("Luasnya adalah", luas, "cm²")
 
+
+import streamlit as st
+
+st.title("Tebak Hewan")
+
+soal = st.selectbox("Petunjuk:", ["Bersuara 'meong'", "Hidup di air", "Bertelur dan bisa terbang"])
+
+if soal == "Bersuara 'meong'":
+    st.success("Jawaban: Kucing")
+elif soal == "Hidup di air":
+    st.success("Jawaban: Ikan")
+elif soal == "Bertelur dan bisa terbang":
+    st.success("Jawaban: Burung")
+
+
