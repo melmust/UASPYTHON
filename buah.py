@@ -40,12 +40,24 @@ elif soal == "Bertelur dan bisa terbang":
 
 import streamlit as st
 
-st.title("Warna Favoritmu")
+st.title("🐾 Tebak Hewan Berdasarkan Ciri")
 
-warna = st.color_picker("Pilih warna kesukaanmu", "#00f900")
-st.write("Kamu memilih warna:", warna)
+st.write("Pilih hewan berdasarkan ciri berikut ini:")
 
-st.markdown(f"<div style='width:100px;height:100px;background-color:{warna}'></div>", unsafe_allow_html=True)
+# Pertanyaan
+ciri = "Hewan ini bersuara 'meong' dan suka bermain."
+
+# Pilihan jawaban
+opsi = ["Anjing", "Kucing", "Ayam", "Gajah"]
+pilihan = st.radio(ciri, opsi)
+
+# Tombol Cek Jawaban
+if st.button("Cek Jawaban"):
+    if pilihan == "Kucing":
+        st.success("Benar! 🐱 Ini adalah kucing.")
+    else:
+        st.error("Salah. Coba lagi ya!")
+
 
 
 
