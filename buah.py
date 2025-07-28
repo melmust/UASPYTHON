@@ -38,3 +38,14 @@ elif soal == "Bertelur dan bisa terbang":
     st.success("Jawaban: Burung")
 
 
+import streamlit as st
+
+st.title("Warna Favoritmu")
+
+warna = st.color_picker("Pilih warna kesukaanmu", "#00f900")
+st.write("Kamu memilih warna:", warna)
+
+st.markdown(f"<div style='width:100px;height:100px;background-color:{warna}'></div>", unsafe_allow_html=True)
+
+
+
