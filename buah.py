@@ -42,21 +42,30 @@ import streamlit as st
 
 st.title("🐾 Tebak Hewan Berdasarkan Ciri")
 
-st.write("Pilih hewan berdasarkan ciri berikut ini:")
+st.write("Pilih hewan berdasarkan ciri berikut:")
 
-# Pertanyaan
-ciri = "Hewan ini bersuara 'meong' dan suka bermain."
+# Ciri-ciri hewan
+ciri = "Hewan ini bersuara 'meong' dan suka bermain di rumah."
 
 # Pilihan jawaban
 opsi = ["Anjing", "Kucing", "Ayam", "Gajah"]
 pilihan = st.radio(ciri, opsi)
 
-# Tombol Cek Jawaban
+# Tombol cek jawaban
 if st.button("Cek Jawaban"):
     if pilihan == "Kucing":
-        st.success("Benar! 🐱 Ini adalah kucing.")
-    else:
-        st.error("Salah. Coba lagi ya!")
+        st.success("Benar! Ini adalah kucing. 🐱")
+        st.image("https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg", width=300)
+    elif pilihan == "Anjing":
+        st.error("Salah. Ini adalah anjing 🐶.")
+        st.image("https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg", width=300)
+    elif pilihan == "Ayam":
+        st.error("Salah. Ini adalah ayam 🐔.")
+        st.image("https://upload.wikimedia.org/wikipedia/commons/5/5b/Hen_5.jpg", width=300)
+    elif pilihan == "Gajah":
+        st.error("Salah. Ini adalah gajah 🐘.")
+        st.image("https://upload.wikimedia.org/wikipedia/commons/6/63/African_elephant_warning_raised_trunk.jpg", width=300)
+
 
 
 
